@@ -15,7 +15,6 @@
     lfe-mode
     ggtags
     helm-gtags
-    flycheck
     ))
 
 (defun lfe/post-init-company ()
@@ -27,9 +26,6 @@
     :init
     (progn
       (add-hook 'lfe-mode-hook 'spacemacs/run-prog-mode-hooks))))
-
-(defun lfe/post-init-flycheck ()
-  (spacemacs/add-flycheck-hook 'lfe-mode))
 
 (defun lfe/post-init-ggtags ()
   (add-hook 'lfe-mode-local-vars-hook #'spacemacs/ggtags-mode-enable))
